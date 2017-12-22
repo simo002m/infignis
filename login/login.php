@@ -9,7 +9,7 @@
 	<!--Import the Inconsolata font-->
 	<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
 	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
 
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -33,7 +33,7 @@
 							<input type="text" placeholder="Brugernavn" name="username" class="validate">
 							<div class="input-field">
 							<input type="password" name="password" placeholder="Adgangskode" class="validate">	
-					<button type="sbmit" class="btn red lighten-1 col s12">Log ind</button>
+					<button type="submit" class="btn red lighten-1 col s12">Log ind</button>
 						</div>
 					</form>
 
@@ -49,17 +49,9 @@
 
 <?php
 
-if ($_POST["username"] == "simon" and $_POST["password"] == "hello") {
-	echo "Success";
-} else {
-	echo "Fail";
-}
+$target_file = fopen("users", "r");
+echo fgets($target_file);
 
-echo "<br>";
-echo "<br>";
-echo $_GET["username"];
-echo "<br>";
-echo $_GET["password"];
 ?>
 
 </body>
